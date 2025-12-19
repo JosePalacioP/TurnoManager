@@ -4,6 +4,7 @@ import { prisma } from "@/lib/db";
 
 export async function registerUser(data: any){
     // Validación de campos
+    console.log("Intentando registrar a:", data.email);
     if (!data.email || !data.password || !data.name){
         return { error: "Todos los campos son obligatorios." };
     }
